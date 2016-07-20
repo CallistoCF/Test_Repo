@@ -1,0 +1,44 @@
+body {
+  
+  /* setting font-size to 0 on the parent of a set of inline block elements removes white space between them.    */
+  font-size: 0; 
+}
+
+.upper{
+  height: 200px;
+  width: 50%;
+  display: inline-block;
+  font-size: 0;
+  margin: auto;
+}
+
+.lower{
+  height: 300px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  display: inline-block;
+  width: 33.33%;
+  font-size: 0;
+  margin: auto;
+}
+
+.box-one {
+   background-color: green;
+}
+
+.box-two {
+  background-color: blue;
+}
+
+.box-three {
+  background-color: grey;
+}
+
+.box-four {
+  background-color: black;
+}
+
+.box-five{
+  background-color: orange;
+}
