@@ -1,0 +1,17 @@
+main {
+  padding: 30px;
+}
+
+
+
+.foo li {
+	border-style: solid;
+	border-color: red;
+	border-width: 1px;
+}
+
+.bar > li   {
+	border-style: solid;
+	border-color: green;
+	border-width: 1px;
+}
