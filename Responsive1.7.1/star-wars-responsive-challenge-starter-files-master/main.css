@@ -1,0 +1,43 @@
+main {
+  padding-top: 0px;
+}
+
+main .row {
+  margin-bottom: 20px;
+}
+
+.titlewrapper {
+  font-size: xx-large;
+  font-weight: bold;
+  text-indent: 40px;
+  padding: 20px;   
+  width:auto;
+}
+
+.titlewrapper p{
+  font-size: small;
+  font-weight: normal;
+}
+
+.charname {
+  font-size: large;
+  font-weight: bold;
+}
+
+.box {
+  height: 320px;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.box img {
+  float: left;
+  max-height: 250px;
+  width: 100%;
+  
+}
+.orange {
+  background-color: orange;
+}
