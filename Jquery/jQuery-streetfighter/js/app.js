@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	console.log("ready!");
+
 	$( "body" ).mouseenter(function() {
 		onenter();	
 	})
@@ -14,34 +15,68 @@ $(document).ready(function() {
        		pressX(); 
 		}		     	
     })
+
+    $( "body ").click(function(event){
+    	hadouken();
+    	
+    });
 });
+
+function hadouken(){
+	$("audio").attr("src", "sound/hadouken.mp3");
+	$(".imga").removeClass("imgbounce");
+	$(".imga").removeClass("imgstart");
+	$(".imga").addClass("imgthrow");
+	//$(".firebox").removeClass("firebox");
+	//$(".firebox").addClass("fireball");
+	//$(".imgb").removeClass("imgb");
+	$(".imgb").addClass("fireball");
+	$(".imgb").animate({
+		left:"+=1000",
+	}, 1000, function() {
+		$(".imga").removeClass("imgthrow");
+		$(".imga").removeClass("imgbounce");
+		$(".imgb").removeClass("fireball");
+		$(".imga").addClass("imgstart");
+		$(".imgb").removeAttr("style");
+		$(".imga").removeClass("imgbounce");
+		$(".imgb").removeClass("fireball");
+		$(".imgb").addClass("imgb");
+		
+	});
+	
+
+};
+
 
 function onenter(){
 	console.log("onenter triggered");
-	$("img").removeClass("imgstart");
-	$("img").addClass("imgbounce");
+	$(".imga").removeClass("imgstart");
+	$(".imga").addClass("imgbounce");
+
 };
 
 function onexit(){
 	console.log("onexit triggered");
-	$("img").removeClass("imgbounce");
-	$("img").addClass("imgstart");
+	$(".imga").removeClass("imgbounce");
+	$(".imga").addClass("imgstart");
 };
 
 function pressX(){
 	console.log("pressX triggered");
-	if ($("img").hasClass("imgcool") == false)
+	if ($(".imga").hasClass("imgcool") == false)
 	{
 		console.log("look cool triggered");
-		$("img").removeClass("imgbounce");
-		$("img").removeClass("imgstart");
-		$("img").addClass("imgcool");
+		$(".imga").removeClass("imgbounce");
+		$(".imga").removeClass("imgstart");
+		$(".imga").addClass("imgcool");
+		
 		
 	}
 	else {
 		console.log("look cool inactive, now uncool");
-		$("img").removeClass("imgcool");
-		$("img").addClass("imgstart");
+		$(".imga").removeClass("imgcool");
+		$(".imga").addClass("imgstart");
 		
 	}
 	
